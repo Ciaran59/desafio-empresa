@@ -4,13 +4,9 @@
 #include "empresa.h"
 
 
-// En el archivo Empleado.cpp
-
 Empleado::Empleado() : nombre(""), salario(0.0), fechaingreso(""), rut(""), afp("") {
     // Constructor por defecto de Empleado
 }
-
-// En el archivo Gerente.cpp
 
 Gerente::Gerente() : Empleado(), area("") {
     // Constructor por defecto de Gerente
@@ -32,7 +28,7 @@ std::string MayorSueldo(Empleado X[], int N) {
         return empleadomayorSueldo;
         std::cout << "Nombre del empleado: " << MayorSueldo(X, N) << std::endl;
 }
-
+// Funcion para llenar el arreglo de gerentes
 void llenarGerentes(Gerente X[], int n) {
     std::string nombre, fechaingreso, rut, afp, area;
     float salario;
@@ -60,10 +56,10 @@ void llenarGerentes(Gerente X[], int n) {
 
         std::cout << "Ingrese el area del gerente: ";
         std::cin >> area;
-        // Aquí asumimos que tienes un setter para 'area' en la clase Gerente
         X[i].setArea(area);
     }
 }
+// Funcion para llenar el arreglo de empleados
 void llenarEmpleados(Empleado X[], int N) {
     std::string nombre, fechaingreso, rut, afp;
     float salario;
